@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<title>Simple Euler project - Problem 3</title>
+
+
+</head>
+<body>
+
+
+
+<div id="wrapper">
+
+
+	<div id="topbar"> </div>
+
+	<div id="header"> </div>
+
+	<div id="menu">
+	<a href="index.html">Home</a>
+	<a href="problem1.html">Problem 1</a>
+	<a href="problem2.html">Problem 2</a>
+	<a href="problem3.html">Problem 3</a>
+	
+	
+	</div>
+
+
+	<div id="content">
+		<h1>Largest Prime Factor</h1>
+		<p>  The prime factors of 13195 are 5, 7, 13 and 29.</p>
+		<p>What is the largest prime factor of the number 600851475143 ?</p>
+
+
+
+	
+<h2> Sample Code: </h2>
+
+
+<pre>
+
+/* My original implementation was right 
+** but too inefficient.  It was basically a 
+** brute force approach, based on a isPrime() function. 
+** It worked on JFiddle though, so I got the answer.   
+** I then read through Project Euler's overview 
+** and decided to apply their algorithm and move on. 
+** This is it:  
+*/
+
+if (num % 2 === 0) {
+	num = num/2;
+	lastFactor = 2;
+	while (num % 2 === 0) {
+		num = num/2;
+	}
+}
+else {
+	lastFactor = 1;
+}
+	
+// This variable holds the answer
+factor=3;
+
+while (num>1) {
+	if (num % factor===0) {
+		num = num/factor;
+		lastFactor = factor;
+
+		while (num % factor===0) {
+			num = num/factor;
+		}
+	}
+	factor = factor+2;
+}
+</pre>
+
+<h2>
+Try for different numbers: </h2>
+
+ 
+ Enter max number: 	
+ <form name="problem_3_form">
+	<input type="number"  id="problem_3_input"  
+    min="1" max="60085147514376" maxlength="100" /> 
+
+    <input type="button" value="Submit" onclick="problem3()"/>
+    </form>
+
+ 				<p>Answer: <span id="problem_3_answer" color=#ff9600></span></p>
+ 		
+	</div>
+
+</div>
+
+<div id="footer">
+<a href="https://github.com/belalik/"> My github </a> | <a href="https://projecteuler.net/">Project EULER</a> | <a href="http://www.theodinproject.com/">ODIN Project</a> | <a href="problem3.html">TURN ON CSS</a>
+</div>
+
+<script src="euler.js"></script>
+</body>
+</html>

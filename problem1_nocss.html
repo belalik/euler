@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<title>Simple Euler project - Problem 1</title>
+
+
+<script type="text/javascript" src="euler.js"></script>
+</head>
+<body>
+
+
+
+<div id="wrapper">
+
+
+	<div id="topbar"> </div>
+
+	<div id="header"> </div>
+
+	<div id="menu">
+	<a href="index.html">Home</a>
+	<a href="problem1.html">Problem 1</a>
+	<a href="problem2.html">Problem 2</a>
+	<a href="problem3.html">Problem 3</a>
+	
+	
+	</div>
+
+
+	<div id="content">
+		<h1>Multiples of 3 and 5</h1>
+		<p>  If we list all the natural numbers below 10 that are multiples of 3 or 5, we get 3, 5, 6 and 9.   The sum of these multiples is 23. </p>
+<p>
+Find the sum of all the multiples of 3 or 5 below 1000.</p>
+
+	
+<h2> Sample Code: </h2>
+
+
+<pre><code>var sum=0;
+    for (i = 0; i < 1000; i++) {
+        if (i%3==0 || i%5==0 ) {
+            sum+=i;
+        }
+    }
+alert(sum);    // print result</code></pre>
+
+<h2>
+Try for different numbers: </h2>
+
+ 
+ Enter number (max 1000): 	
+ <form name="problem_1_form">
+	<input type="number"  id="problem_1_input"  
+    min="1" max="1000" maxlength="3" /> 
+    
+    <input type="button" value="Submit" onclick="problem1()"/>
+</form>
+
+
+<p> The answer is: <span id="problem_1_answer"> </span> </p>
+ 				
+ 		
+	</div>
+
+</div>
+
+<div id="footer">
+<a href="https://github.com/belalik/"> My github </a> | <a href="https://projecteuler.net/">Project EULER</a> | <a href="http://www.theodinproject.com/">ODIN Project</a> | <a href="problem1.html">TURN ON CSS</a>
+</div>
+
+
+</body>
+</html>
